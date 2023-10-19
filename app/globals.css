@@ -1,27 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap');
+
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --clr-primary: #3a86ff;
+  --clr-neutral: #7D8696;
+  --clr-white: #FFFFFF;
+
+  --f-primary: 'Space Grotesk', sans-serif;
+  --f-secondary: 'Mulish', sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+  font-family: 'Space Grotesk', sans-serif;
+	color: black;
+  background: var(--clr-white);
+}
+
+main {
+  min-height: 100vh;
+}
+
+h1, h2 {
+  font-family: var(--f-primary);
+  font-weight: 700;
+}
+
+p, small {
+  font-family: var(--f-secondary);
+  font-weight: 400;
+}
+
+.font-primary {
+  font-family: var(--f-primary);
+}
+
+.font-secondary {
+  font-family: var(--f-secondary);
+}
+
+.nav-link-container a {
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav-link-container a:hover {
+  border-color: var(--clr-primary);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
