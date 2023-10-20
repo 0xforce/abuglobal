@@ -32,7 +32,7 @@ function Navbar() {
               <Link href={''} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">About</Link>
               <Link href={''} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">Contact</Link>
               <Link href={'/exchange'}>
-                <Button text='Buy & sell crypto'/>
+                <Button text='Buy & sell crypto' styles='bg-primary text-white px-5 py-3'/>
               </Link>
             </div>
             <div className="block md:hidden"> 
@@ -72,7 +72,7 @@ function Navbar() {
               <Link href={''} className="text-[30px] transition-opacity duration-400 ease-in hover:opacity-20">About</Link>
               <Link href={''} className="text-[30px] transition-opacity duration-400 ease-in hover:opacity-20">Contact</Link>
               <Link href={'/exchange'} className="w-full">
-                <Button text='Buy & sell crypto'/>
+                <Button text='Buy & sell crypto' styles='bg-primary text-white px-5 py-3'/>
               </Link>
             </div>
           </div>
