@@ -1,5 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
+
+import { useRef, MutableRefObject  } from "react"
+import { useIsVisible } from "@/components/hooks"
 
 import Button from "@/components/ui/Button"
 
@@ -8,7 +13,18 @@ import BrandImage from "@/components/ui/BrandImage"
 
 import { brandImages } from '@/constants/index'
 
+import HomeCards from "@/components/ui/HomeCards"
+
 export default function Home() {
+  const ref1: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible1 = useIsVisible(ref1)
+
+  const ref2: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible2 = useIsVisible(ref2)
+
+  const ref3: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible3 = useIsVisible(ref3)
+
   return (
     <main>
       <section className="relative z-10 rounded-b-[32px] bg-white">
@@ -43,17 +59,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-0 rounded-b-[32px] mt-[-50px]">
-        <div className="bg-black max-w-7xl flex flex-col justify-between items-center text-center py-[140px] gap-6">
-          <p className="text-primary uppercase font-bold text-[14px] leading-[24px]">making crypto onboarding simple</p>
-          <h2 className="text-white font-semibold text-[48px] leading-[58px]">One verified crypto exchanger, two powerful ramps</h2>
-          <div className="flex flex-row ">
-              <div>
-                
-              </div>
-              <div>
+      <section className="relative z-0 bg-black rounded-b-[32px] mt-[-50px] w-full">
+        <div className="mx-auto max-w-7xl flex flex-col justify-center items-center min-h-screen pt-[100px] pb-[40px] lg:pt-[60px] gap-6 px-[24px]">
+          <p ref={ref1} className={`text-primary uppercase font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>making crypto onboarding simple</p>
+          <h2 ref={ref2} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>One verified crypto exchanger, two powerful ramps</h2>
+          <div ref={ref3} className={`flex flex-col lg:flex-row gap-6 justify-center mt-[56px] ${isVisible2 && " animate-fade animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+            <HomeCards 
+              img="/assets/onRamp.png" 
+              alt="on-ramp crypto" 
+              title="Fiat to crypto on-ramp" 
+              text="Onboard users by facilitating the conversion of traditional currency (fiat) into cryptocurrency, allowing users to enter the digital asset space by purchasing cryptocurrencies using methods like bank transfers,zelle,cash or other payment methods"
+            />
 
-              </div>
+            <HomeCards 
+              img="/assets/offRamp.png" 
+              alt="off-ramp crypto" 
+              title="Crypto to fiat off-ramp" 
+              text="Give users the freedom to move back to fiat by selling their cryptocurrencies and receiving traditional currencies in return through bank transfers and other payment methods available"
+            />
           </div>
         </div>
       </section>

@@ -2,43 +2,43 @@ export const brandImages = [
     {
       src: "assets/metamask.svg",
       alt: "metamask",
-      style: "grayscale",
+      style: { filter: 'grayscale(100%)' },
       width: 200,
       height: 200
     },
     {
         src: "assets/binance.svg",
         alt: "binance",
-        style: "grayscale",
+        style: { filter: 'grayscale(100%)' },
         width: 200,
         height: 200
     },
     {
         src: "assets/trustwallet.svg",
         alt: "trustwallet",
-        style: "grayscale",
+        style: { filter: 'grayscale(100%)' },
         width: 200,
         height: 200
     },
     {
         src: "assets/usdt.svg",
         alt: "usdt",
-        style: "grayscale",
+        style: { filter: 'grayscale(100%)' },
         width: 200,
         height: 200
     },
     {
         src: "assets/kucoin.svg",
         alt: "kucoin",
-        style: "grayscale",
+        style: { filter: 'grayscale(100%)' },
         width: 200,
         height: 200
     },
     {
         src: "assets/bybit.svg",
         alt: "bybit",
-        style: "invert-[35%] sepia-[11%] saturate-[.28] hue-rotate-[314deg] brightness-[92%] contrast-[87%]",
+        style: { filter: "invert(35%) sepia(11%) saturate(0.28) hue-rotate(314deg) brightness(92%) contrast(87%)"},
         width: 150,
-        height: 100
+        height: 150
     },
 ]

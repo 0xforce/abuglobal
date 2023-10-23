@@ -25,6 +25,8 @@ html {
   font-family: 'Space Grotesk', sans-serif;
 	color: black;
   background: var(--clr-white);
+  height: 100%;
+  width: 100%;
 }
 
 main {

@@ -4,7 +4,7 @@ interface Props {
     brand: {
       src: string;
       alt: string;
-      style?: string;
+      style?: any;
       width: number;
       height: number;
     }
@@ -13,7 +13,9 @@ interface Props {
 const BrandImage = ({ brand }: Props) => {
   return (
     <>
-      <Image src={brand.src} alt={brand.alt} width={brand.width} height={brand.height} className={`${brand.style}`}/>
+      <div style={brand.style}>
+        <Image src={brand.src} alt={brand.alt} width={brand.width} height={brand.height} className={`w-[${brand.width}] h-auto`}/>
+      </div>
     </>
   );
 };
