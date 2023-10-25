@@ -23,6 +23,19 @@ const config: Config = {
         'primary': '#3a86ff',
         'neutral': '#7D8696'
       },
+      animation: {
+        bannermove: 'bannermove 20s linear infinite',
+      },
+      keyframes: {
+        bannermove: {
+          '0%': {
+            transform: 'translateX(0)'
+          },
+          '100%': {
+            transform: 'translateX(-50%)'
+          }
+        }
+      }
     },
   },
   plugins: [

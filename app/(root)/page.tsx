@@ -10,10 +10,13 @@ import Button from "@/components/ui/Button"
 
 import img1 from '@/public/assets/ej1.png'
 import BrandImage from "@/components/ui/BrandImage"
+import IconCard from "@/components/ui/IconCard"
+import InfiniteCarousel from "@/components/ui/InfiniteCarousel"
 
-import { brandImages } from '@/constants/index'
+import { brandImages, iconCards, paymentImages, exchangeProcess } from '@/constants/index'
 
 import HomeCards from "@/components/ui/HomeCards"
+import ProcessStep from "@/components/ui/ProcessStep"
 
 export default function Home() {
   const ref1: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
@@ -25,9 +28,20 @@ export default function Home() {
   const ref3: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
   const isVisible3 = useIsVisible(ref3)
 
+  const ref4: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible4 = useIsVisible(ref4)
+
+  const ref5: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible5 = useIsVisible(ref5)
+
+  const ref6: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible6 = useIsVisible(ref6)
+
   return (
     <main>
-      <section className="relative z-10 rounded-b-[32px] bg-white">
+      {/* //FIRST SECTION ------------------------------------------------------------------ */}
+
+      <section className="relative z-20 rounded-b-[32px] bg-white">
         <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between px-10 mt-20">
           <div className="w-full flex flex-col gap-6 items-center lg:items-start">
             <p className="font-primary text-black font-bold text-[55px] leading-[77px] animate-fade-up animate-once animate-duration-300 animate-ease-in">Enable users to<br /><span className="text-primary">buy & sell crypto</span><br /> for fiat currency</p>
@@ -58,12 +72,14 @@ export default function Home() {
             </div>
         </div>
       </section>
+      
+      {/* //SECOND SECTION ------------------------------------------------------------------ */}
 
-      <section className="relative z-0 bg-black rounded-b-[32px] mt-[-50px] w-full">
-        <div className="mx-auto max-w-7xl flex flex-col justify-center items-center min-h-screen pt-[100px] pb-[40px] lg:pt-[60px] gap-6 px-[24px]">
-          <p ref={ref1} className={`text-primary uppercase font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>making crypto onboarding simple</p>
+      <section className="relative z-10 bg-black rounded-b-[32px] mt-[-30px] w-full">
+        <div className="h-full mx-auto max-w-7xl flex flex-col justify-center items-center pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
+          <p ref={ref1} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>making crypto onboarding simple</p>
           <h2 ref={ref2} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>One verified crypto exchanger, two powerful ramps</h2>
-          <div ref={ref3} className={`flex flex-col lg:flex-row gap-6 justify-center mt-[56px] ${isVisible2 && " animate-fade animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+          <div ref={ref3} className={`flex flex-col lg:flex-row gap-6 justify-center mt-[56px] ${isVisible3 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
             <HomeCards 
               img="/assets/onRamp.png" 
               alt="on-ramp crypto" 
@@ -77,6 +93,63 @@ export default function Home() {
               title="Crypto to fiat off-ramp" 
               text="Give users the freedom to move back to fiat by selling their cryptocurrencies and receiving traditional currencies in return through bank transfers and other payment methods available"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* //THIRD SECTION ------------------------------------------------------------------ */}
+
+      <section className="relative z-0 bg-white rounded-b-[32px] mt-20 w-full">
+        <div ref={ref4} className={`mx-auto max-w-7xl flex flex-col lg:flex-row justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-10 px-[24px] ${isVisible4 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+          {iconCards.map((icon, index) => (
+            <div key={index}>
+              <IconCard
+                icon={icon}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="mx-auto max-w-7xl flex flex-col justify-center items-center mt-10 pb-[10px] lg:pt-[20px] gap-6 px-[24px] overflow-hidden">
+          <h2 ref={ref5} className={`font-bold text-primary text-[24px] leading-[24px] uppercase ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-600 animate-ease-in"}`}>Payment Methods</h2>
+          <p className={`text-neutral font-semibold text-center ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Choose your preferred option from all major global available payment methods. Buy crypto Bank transfers, Zelle ,Paypal, Nequi, and many others</p>
+          <article className="flex w-[200%] mt-10">
+            <div className="w-[100%] animate-bannermove">
+              <ul className="flex justify-center items-center list-none pl-0 m-0">
+                {paymentImages.map((img, index) => (
+                    <InfiniteCarousel
+                      key={index}
+                      img={img}
+                    />
+                ))}
+              </ul>
+            </div>
+            <div className="w-[100%] animate-bannermove">
+              <ul className="flex justify-center items-center list-none pl-0 m-0">
+                {paymentImages.map((img, index) => (
+                    <InfiniteCarousel
+                      key={index}
+                      img={img}
+                    />
+                ))}
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* //FOURTH SECTION ------------------------------------------------------------------ */}
+
+      <section className="relative z-0 rounded-b-[32px] mt-20 w-full bg-[url('/assets/gradient.png')]">
+        <div className="mx-auto max-w-7xl flex flex-col justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
+          <p ref={ref1} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>buying cryptocurrency</p>
+          <h2 ref={ref2} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>How to exchange your crypto online with AbuGlobal</h2>
+          <div className="flex flex-wrap mt-8">
+            {exchangeProcess.map((num, index) => (
+              <ProcessStep
+                key={index}
+                num={num}
+              />
+            ))}
           </div>
         </div>
       </section>
