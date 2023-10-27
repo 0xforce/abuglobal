@@ -12,11 +12,13 @@ import img1 from '@/public/assets/ej1.png'
 import BrandImage from "@/components/ui/BrandImage"
 import IconCard from "@/components/ui/IconCard"
 import InfiniteCarousel from "@/components/ui/InfiniteCarousel"
+import ImageSlider from "@/components/ui/ImageSlider"
 
-import { brandImages, iconCards, paymentImages, exchangeProcess } from '@/constants/index'
+import { brandImages, iconCards, paymentImages, exchangeProcess, preguntas } from '@/constants/index'
 
 import HomeCards from "@/components/ui/HomeCards"
 import ProcessStep from "@/components/ui/ProcessStep"
+import Faq from "@/components/ui/Faq"
 
 export default function Home() {
   const ref1: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
@@ -37,11 +39,43 @@ export default function Home() {
   const ref6: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
   const isVisible6 = useIsVisible(ref6)
 
+  const ref7: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible7 = useIsVisible(ref7)
+
+  const ref8: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible8 = useIsVisible(ref8)
+
+  const ref9: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible9 = useIsVisible(ref9)
+
+  const ref10: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible10 = useIsVisible(ref10)
+
+  const ref11: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible11 = useIsVisible(ref11)
+
+  const ref12: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible12 = useIsVisible(ref12)
+
+  const ref13: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible13 = useIsVisible(ref13)
+
+  const ref14: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible14 = useIsVisible(ref14)
+
+  const ref15: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
+  const isVisible15 = useIsVisible(ref15)
+
+  const images = [
+    '/assets/pex1.jpeg',
+    '/assets/pex2.jpeg',
+  ];
+
   return (
     <main>
       {/* //FIRST SECTION ------------------------------------------------------------------ */}
 
-      <section className="relative z-20 rounded-b-[32px] bg-white">
+      <section className="relative z-40 rounded-b-[32px] bg-white">
         <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between px-10 mt-20">
           <div className="w-full flex flex-col gap-6 items-center lg:items-start">
             <p className="font-primary text-black font-bold text-[55px] leading-[77px] animate-fade-up animate-once animate-duration-300 animate-ease-in">Enable users to<br /><span className="text-primary">buy & sell crypto</span><br /> for fiat currency</p>
@@ -75,7 +109,7 @@ export default function Home() {
       
       {/* //SECOND SECTION ------------------------------------------------------------------ */}
 
-      <section className="relative z-10 bg-black rounded-b-[32px] mt-[-30px] w-full">
+      <section className="relative z-30 bg-black rounded-b-[32px] mt-[-30px] w-full">
         <div className="h-full mx-auto max-w-7xl flex flex-col justify-center items-center pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
           <p ref={ref1} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>making crypto onboarding simple</p>
           <h2 ref={ref2} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>One verified crypto exchanger, two powerful ramps</h2>
@@ -84,7 +118,7 @@ export default function Home() {
               img="/assets/onRamp.png" 
               alt="on-ramp crypto" 
               title="Fiat to crypto on-ramp" 
-              text="Onboard users by facilitating the conversion of traditional currency (fiat) into cryptocurrency, allowing users to enter the digital asset space by purchasing cryptocurrencies using methods like bank transfers,zelle,cash or other payment methods"
+              text="Onboard users by facilitating the conversion of traditional currency (fiat) into cryptocurrency, allowing users to enter the digital asset space by purchasing cryptocurrencies using methods like bank transfers, zelle, cash or other payment methods"
             />
 
             <HomeCards 
@@ -99,20 +133,11 @@ export default function Home() {
 
       {/* //THIRD SECTION ------------------------------------------------------------------ */}
 
-      <section className="relative z-0 bg-white rounded-b-[32px] mt-20 w-full">
-        <div ref={ref4} className={`mx-auto max-w-7xl flex flex-col lg:flex-row justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-10 px-[24px] ${isVisible4 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
-          {iconCards.map((icon, index) => (
-            <div key={index}>
-              <IconCard
-                icon={icon}
-              />
-            </div>
-          ))}
-        </div>
+      <section className="relative z-20 bg-white rounded-b-[32px] mt-20 w-full">
         <div className="mx-auto max-w-7xl flex flex-col justify-center items-center mt-10 pb-[10px] lg:pt-[20px] gap-6 px-[24px] overflow-hidden">
           <h2 ref={ref5} className={`font-bold text-primary text-[24px] leading-[24px] uppercase ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-600 animate-ease-in"}`}>Payment Methods</h2>
-          <p className={`text-neutral font-semibold text-center ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Choose your preferred option from all major global available payment methods. Buy crypto Bank transfers, Zelle ,Paypal, Nequi, and many others</p>
-          <article className="flex w-[200%] mt-10">
+          <p className={`text-neutral font-semibold text-center ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Choose your preferred option from all major global available payment methods. Buy crypto Bank transfers, Zelle, Paypal, Nequi, and many others</p>
+          <article className="flex w-[300%] lg:w-[180%] mt-10">
             <div className="w-[100%] animate-bannermove">
               <ul className="flex justify-center items-center list-none pl-0 m-0">
                 {paymentImages.map((img, index) => (
@@ -139,11 +164,11 @@ export default function Home() {
 
       {/* //FOURTH SECTION ------------------------------------------------------------------ */}
 
-      <section className="relative z-0 rounded-b-[32px] mt-20 w-full bg-[url('/assets/gradient.png')]">
+      <section className="relative z-10 rounded-b-[32px] mt-20 w-full bg-cover bg-[url('/assets/gradient.png')]">
         <div className="mx-auto max-w-7xl flex flex-col justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
-          <p ref={ref1} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>buying cryptocurrency</p>
-          <h2 ref={ref2} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>How to exchange your crypto online with AbuGlobal</h2>
-          <div className="flex flex-wrap mt-8">
+          <p ref={ref6} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible6 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>buying & selling cryptocurrency</p>
+          <h2 ref={ref7} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible7 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>How to exchange your crypto online with AbuGlobal</h2>
+          <div ref={ref8} className={`flex flex-wrap gap-6 mt-8 ${isVisible8 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
             {exchangeProcess.map((num, index) => (
               <ProcessStep
                 key={index}
@@ -153,6 +178,68 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* //Fifth SECTION ------------------------------------------------------------------ */}
+
+      <section className="relative z-0 bg-white rounded-b-[32px] mt-20 w-full">
+        <div ref={ref4} className={`mx-auto max-w-7xl flex flex-col lg:flex-row justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-10 px-[24px] ${isVisible4 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+          {iconCards.map((icon, index) => (
+            <div key={index}>
+              <IconCard
+                icon={icon}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* //Sixth SECTION ------------------------------------------------------------------ */}
+
+      <section className="relative z-0 bg-white rounded-b-[32px]  w-full">
+        <div ref={ref9} className={`mx-auto max-w-7xl flex flex-col justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-10 px-[24px] ${isVisible9 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+          <p ref={ref10} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible10 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>trusted services</p>
+          <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Evidence of our Trusted Services</h2>
+          
+          <div className="flex flex-col md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
+            <div className="text-center md:text-start">
+              <h3 ref={ref12} className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible12 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Verified Transactions</h3>
+              <p ref={ref13} className={`text-neutral uppercase mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible13 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>When you opt for ABU GLOBAL as your crypto on and off-ramp exchanger, you're embracing a reliable partner dedicated to your success. Our Verified Transactions go beyond mere numbers; they symbolize our mission — to provide services that inspire confidence, drive growth, make Web3 accessible, and, most importantly, leave a lasting positive impact on every client we assist.</p>
+            </div>
+            <div ref={ref14} className={`${isVisible14 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+              <ImageSlider images={images}/>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
+            <div ref={ref15} className={`grow ${isVisible15 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+              <ImageSlider images={images}/>
+            </div>
+            <div className="text-center md:text-start">
+              <h3 className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>words of appreciation</h3>
+              <p className={`text-neutral uppercase mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>We take pride in every success tale our clients share. Their positive experiences validate our dedication to delivering exceptional services. Whether it's a thriving business, an individual achieving their financial dreams, or a seamless cryptocurrency exchange leaving a lasting impact, each testimonial underscores the genuine worth of our offerings. Celebrate success with ABU GLOBAL – where every story inspires our commitment to excellence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* //Seventh SECTION ------------------------------------------------------------------ */}
+
+      <section className="relative z-0 bg-white rounded-b-[32px] w-full">
+        <div className={`mx-auto max-w-7xl flex flex-col justify-center items-center pb-[50px] gap-10 px-[24px]`}>
+          <p ref={ref10} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible10 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>learn more</p>
+          <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Frequently asked questions</h2>
+          <div className="flex flex-col">
+            {preguntas.map((pregunta, index) => (
+              <Faq 
+                key={index}
+                pregunta={pregunta.pregunta} 
+                respuesta={pregunta.respuesta} 
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }
