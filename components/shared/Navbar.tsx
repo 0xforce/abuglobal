@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation';
 
 import Link from "next/link"
 import Image from "next/image"
@@ -11,6 +12,7 @@ import logo from '../../public/assets/logo.svg'
 import Button from "../ui/Button"
 
 function Navbar() {
+  const pathname = usePathname()
   const [isMenu, setIsMenu] = useState(false)
 
   const menuHandler = () => {
@@ -19,7 +21,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="py-3">
+    <nav className={`py-3 ${(pathname.startsWith('/aml') || pathname.startsWith('/terms') || pathname.startsWith('/privacy')) && "bg-[#f0f2f4]"}`}>
       {isMenu === false ? (
         <div className="container mx-auto max-w-7xl flex items-center justify-between px-10">
           <Link href='/' className="flex items-center">
@@ -29,10 +31,10 @@ function Navbar() {
 
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex gap-4 font-semibold leading-5 items-center">
-              <Link href={''} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">About</Link>
-              <Link href={''} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">Contact</Link>
+              <Link href={'/about'} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">About</Link>
+              <Link href={'/contact'} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">Contact</Link>
               <Link href={'/exchange'}>
-                <Button text='Buy & sell crypto' styles='bg-primary text-white px-5 py-3'/>
+                <Button text='Buy & sell crypto' styles={`bg-primary text-white px-5 py-3 shadow-md`}/>
               </Link>
             </div>
             <div className="block md:hidden"> 

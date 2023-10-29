@@ -201,9 +201,9 @@ export default function Home() {
           <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Evidence of our Trusted Services</h2>
           
           <div className="flex flex-col md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
-            <div className="text-center md:text-start">
+            <div className="flex flex-col justify-center items-center text-center md:text-start">
               <h3 ref={ref12} className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible12 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Verified Transactions</h3>
-              <p ref={ref13} className={`text-neutral uppercase mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible13 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>When you opt for ABU GLOBAL as your crypto on and off-ramp exchanger, you're embracing a reliable partner dedicated to your success. Our Verified Transactions go beyond mere numbers; they symbolize our mission — to provide services that inspire confidence, drive growth, make Web3 accessible, and, most importantly, leave a lasting positive impact on every client we assist.</p>
+              <p ref={ref13} className={`text-neutral uppercase text-justify mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible13 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>When you opt for ABU GLOBAL as your crypto on and off-ramp exchanger, you're embracing a reliable partner dedicated to your success. Our Verified Transactions go beyond mere numbers; they symbolize our mission — to provide services that inspire confidence, drive growth, make Web3 accessible, and, most importantly, leave a lasting positive impact on every client we assist.</p>
             </div>
             <div ref={ref14} className={`${isVisible14 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
               <ImageSlider images={images}/>
@@ -214,9 +214,9 @@ export default function Home() {
             <div ref={ref15} className={`grow ${isVisible15 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
               <ImageSlider images={images}/>
             </div>
-            <div className="text-center md:text-start">
+            <div className="flex flex-col justify-center items-center text-center md:text-start">
               <h3 className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>words of appreciation</h3>
-              <p className={`text-neutral uppercase mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>We take pride in every success tale our clients share. Their positive experiences validate our dedication to delivering exceptional services. Whether it's a thriving business, an individual achieving their financial dreams, or a seamless cryptocurrency exchange leaving a lasting impact, each testimonial underscores the genuine worth of our offerings. Celebrate success with ABU GLOBAL – where every story inspires our commitment to excellence.</p>
+              <p className={`text-neutral uppercase text-justify mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>We take pride in every success tale our clients share. Their positive experiences validate our dedication to delivering exceptional services. Whether it's a thriving business, an individual achieving their financial dreams, or a seamless cryptocurrency exchange leaving a lasting impact, each testimonial underscores the genuine worth of our offerings. Celebrate success with ABU GLOBAL – where every story inspires our commitment to excellence.</p>
             </div>
           </div>
         </div>
@@ -225,10 +225,10 @@ export default function Home() {
       {/* //Seventh SECTION ------------------------------------------------------------------ */}
 
       <section className="relative z-0 bg-white rounded-b-[32px] w-full">
-        <div className={`mx-auto max-w-7xl flex flex-col justify-center items-center pb-[50px] gap-10 px-[24px]`}>
+        <div className={`mx-auto max-w-4xl flex flex-col justify-center items-center pb-[50px] gap-10 px-[24px]`}>
           <p ref={ref10} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible10 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>learn more</p>
           <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Frequently asked questions</h2>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full">
             {preguntas.map((pregunta, index) => (
               <Faq 
                 key={index}
