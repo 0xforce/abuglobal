@@ -2,9 +2,13 @@
 
 import { configureStore } from '@reduxjs/toolkit'
 
+import connectionSlice from './features/connectionSlice';
+import tokensSlice from './features/tokensSlice';
+
 export const store = configureStore({
     reducer: {
-
+      connectionSlice,
+      tokensSlice,
     },
     devTools: true,
     middleware: (getDefaultMiddleware) =>

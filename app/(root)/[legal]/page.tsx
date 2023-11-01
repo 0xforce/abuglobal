@@ -29,7 +29,7 @@ function page({ params }: {
                             )}
                         </div>
                         <div className='w-full flex justify-center'>
-                            <div className='flex flex-row justify-around gap-[110px]'>
+                            <div className='flex flex-row justify-around gap-[10px] md:gap-[110px]'>
                                 <Link href='/terms-of-service' className={`text-[#3d4651] px-[24px] py-[18px] font-bold rounded-t-lg ${params.legal === 'terms-of-service' && "bg-white text-black"}`}>Terms Of Service</Link>
                                 <Link href='/privacy-policy' className={`text-[#3d4651] px-[24px] py-[18px] font-bold rounded-t-lg ${params.legal === 'privacy-policy' && "bg-white text-black"}`}>Privacy Policy</Link>
                                 <Link href='/aml-kyc-policy' className={`text-[#3d4651] px-[24px] py-[18px] font-bold rounded-t-lg ${params.legal === 'aml-kyc-policy' && "bg-white text-black"}`}>AML/KYC Policy</Link>

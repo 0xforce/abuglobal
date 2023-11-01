@@ -1,0 +1,80 @@
+{
+    "1": {
+        "chain": {
+            "name": "Ethereum"
+        },
+        "USDT": {
+            "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+        },
+        "USDC": {
+            "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+        },
+        "explorerURL": "https://etherscan.io/"
+    },
+    "42161": {
+        "chain": {
+            "name": "Arbitrum"
+        },
+        "USDT": {
+            "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"
+        },
+        "USDC": {
+            "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"
+        },
+        "USDCe": {
+            "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"
+        },
+        "explorerURL": "https://arbiscan.io/"
+    },
+    "56": {
+        "chain": {
+            "name": "BNB"
+        },
+        "USDT": {
+            "address": "0x55d398326f99059fF775485246999027B3197955"
+        },
+        "USDC": {
+            "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"
+        },
+        "explorerURL": "https://bscscan.com/"
+    },
+    "137": {
+        "chain": {
+            "name": "Polygon"
+        },
+        "USDT": {
+            "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
+        },
+        "USDC": {
+            "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "explorerURL": "https://polygonscan.com/"
+    },
+    "10": {
+        "chain": {
+            "name": "Optimism"
+        },
+        "USDT": {
+            "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
+        },
+        "USDC": {
+            "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85"
+        },
+        "USDCe": {
+            "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607"
+        },
+        "explorerURL": "https://optimistic.etherscan.io/"
+    },
+    "11155111": {
+        "chain": {
+            "name": "Sepolia"
+        },
+        "USDT": {
+            "address": "0xC4332d1Af471CF61f46428894e74D8BA73F13413"
+        },
+        "USDC": {
+            "address": "0x9d7907F74450F3C273027499E421EDDd0113E273"
+        },
+        "explorerURL": "https://sepolia.etherscan.io/"
+    }
+}
