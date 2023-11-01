@@ -1,7 +1,6 @@
 import {FieldValues, useForm, UseFormRegister} from "react-hook-form";
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useState } from "react";
 
 type Props = {
     renderForm: (formProps: FormProps) => React.ReactNode;
@@ -14,7 +13,7 @@ export type FormProps = {
     errors: { [error: string]: any };
 };
 
-    function Form({ renderForm, setFormData }: Props) {
+function Form({ renderForm, setFormData }: Props) {
     const {
         register,
         handleSubmit,
@@ -25,7 +24,7 @@ export type FormProps = {
     const onSubmit = async (data: object) => {
         try {
             setFormData(data);
-             // successful
+            // successful
             toast.success("Order Successful")
         } catch (error) {
             // unknown error

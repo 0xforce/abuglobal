@@ -55,5 +55,10 @@ p, small {
   border-color: var(--clr-primary);
 }
 
+.tab--active {
+  background: var(--clr-primary);
+  color: white;
+}
+
 @media (prefers-color-scheme: dark) {
 }
