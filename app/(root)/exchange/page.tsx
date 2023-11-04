@@ -10,7 +10,7 @@ import FormHeader from '@/components/forms/FormHeader';
 import { useAppDispatch, useAppSelector } from '@/app/globalRedux/hooks';
 import { setProvider, setChainId, setAccount } from '@/app/globalRedux/features/connectionSlice';
 import { setTokens } from '@/app/globalRedux/features/tokensSlice';
-import ExchangeForm from '@/components/forms/ExchangeForm';
+import Rhf from '@/components/forms/rhf';
 
 interface ChainConfig {
   chain: { name: string };
@@ -72,9 +72,9 @@ function page() {
       <div className="container mx-auto max-w-7xl flex flex-col items-center justify-between px-10 py-20">
         <div className='bg-white flex flex-col gap-4 rounded-lg shadow-slate-300 shadow-md py-4'>
           <FormHeader />
-          <ExchangeForm />
+          <Rhf />
         </div>
-        <h1 className='text-white font-bold text-[40px] mt-10'>Buy & sell Crypto</h1>
+        <h1 className='text-white font-bold text-[40px] mt-10'>Buy & Sell Crypto</h1>
       </div>
     </section>
   )

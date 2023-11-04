@@ -1,4 +1,4 @@
-import { useState, useRef, RefObject } from 'react'
+import { useRef, RefObject } from 'react'
 
 import Image from "next/image"
 import logo from '../../public/assets/logo.svg'

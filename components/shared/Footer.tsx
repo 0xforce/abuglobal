@@ -46,20 +46,20 @@ function Footer() {
                     <h4 className="uppercase text-neutral text-[12px] font-bold font-primary">contact</h4>
                     <div className="flex flex-col gap-2 mt-6">
                         <div className="flex flex-row gap-2">
-                            <Image src='/assets/whatsapp.svg' alt="whatsapp icon" width={18} height={18}/>
-                            <Link href='/' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">Whatsapp</Link>
+                            <Image src='/assets/whatsapp.svg' alt="whatsapp icon" width={18} height={18} className="w-[18px] h-[18px]"/>
+                            <Link href='https://api.whatsapp.com/send?phone=17542659869' target='_blank' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">Whatsapp</Link>
                         </div>
                         <div className="flex flex-row gap-2">
-                            <Image src='/assets/telegram.svg' alt="telegram icon" width={18} height={18}/>
-                            <Link href='/' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">Telegram</Link>
+                            <Image src='/assets/telegram.svg' alt="telegram icon" width={18} height={18} className="w-[18px] h-[18px]"/>
+                            <Link href='https://talkabuglobal.t.me' target="_blank" className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">Telegram</Link>
                         </div>
                         <div className="flex flex-row gap-2">
-                            <Image src='/assets/imessage.svg' alt="iMessage icon" width={18} height={18}/>
+                            <Image src='/assets/imessage.svg' alt="iMessage icon" width={18} height={18} className="w-[18px] h-[18px]"/>
                             <Link href='/' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">iMessage</Link>
                         </div>
                         <div className="flex flex-row gap-2">
-                            <Image src='/assets/email.png' alt="email icon" width={18} height={8}/>
-                            <Link href='/' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">email</Link>
+                            <Image src='/assets/email.png' alt="email icon" width={18} height={8} className="w-[18px] h-[18px]"/>
+                            <Link href='/' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">sales@abuglobal.io</Link>
                         </div>
                     </div>
                 </div>
