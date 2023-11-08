@@ -18,12 +18,12 @@ const Slider: React.FC<ImageSliderProps> = ({ images }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative h-[600px] w-[400px] overflow-hidden rounded-3xl">
+      <div className="relative h-[600px] w-[350px] overflow-hidden rounded-3xl">
         {images.map((image, index) => (
           <Image
             key={index}
             src={image}
-            width={400}
+            width={350}
             height={600}
             alt={`Image ${index}`}
             className="absolute w-full h-full transition-transform transform"

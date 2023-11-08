@@ -140,7 +140,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl flex flex-col justify-center items-center mt-10 pb-[10px] lg:pt-[20px] gap-6 px-[24px] overflow-hidden">
           <h2 ref={ref5} className={`font-bold text-primary text-[24px] leading-[24px] uppercase ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-600 animate-ease-in"}`}>Payment Methods</h2>
           <p className={`text-neutral font-semibold text-center ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Choose your preferred option from all major global available payment methods. Buy crypto Bank transfers, Zelle, Paypal, Nequi, and many others</p>
-          <article className="flex w-[320%] lg:w-[180%] mt-10">
+          <article className="flex w-[400%] lg:w-[180%] mt-10">
             <div className="w-[100%] animate-bannermove">
               <ul className="flex justify-center items-center list-none pl-0 m-0">
                 {paymentImages.map((img, index) => (
@@ -216,7 +216,7 @@ export default function Home() {
           <div className="flex flex-col max-w-5xl md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
             <div className="flex flex-col justify-center items-center text-center md:text-start">
               <h3 ref={ref12} className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible12 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Verified Transactions</h3>
-              <p ref={ref13} className={`text-neutral uppercase text-justify mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible13 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>When you opt for ABU GLOBAL as your crypto on and off-ramp exchanger, you're embracing a reliable partner dedicated to your success. Our Verified Transactions go beyond mere numbers; they symbolize our mission — to provide services that inspire confidence, drive growth, make Web3 accessible, and, most importantly, leave a lasting positive impact on every client we assist.</p>
+              <p ref={ref13} className={`text-neutral text-justify mt-[20px] font-bold text-[14px] px-4 md:px-0 md:text-[16px] leading-[24px] ${isVisible13 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>When you opt for ABU GLOBAL as your crypto on and off-ramp exchanger, you're embracing a reliable partner dedicated to your success. Our Verified Transactions go beyond mere numbers; they symbolize our mission — to provide services that inspire confidence, drive growth, make Web3 accessible, and, most importantly, leave a lasting positive impact on every client we assist.</p>
             </div>
             <div ref={ref14} className={`${isVisible14 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
               <ImageSlider images={verifiedTransactions}/>
@@ -229,7 +229,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center items-center text-center md:text-start">
               <h3 className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>words of appreciation</h3>
-              <p className={`text-neutral uppercase text-justify mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>We take pride in every success tale our clients share. Their positive experiences validate our dedication to delivering exceptional services. Whether it's a thriving business, an individual achieving their financial dreams, or a seamless cryptocurrency exchange leaving a lasting impact, each testimonial underscores the genuine worth of our offerings. Celebrate success with ABU GLOBAL – where every story inspires our commitment to excellence.</p>
+              <p className={`text-neutral text-justify mt-[20px] font-bold text-[14px] px-4 md:px-0 md:text-[16px] leading-[24px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>We take pride in every success tale our clients share. Their positive experiences validate our dedication to delivering exceptional services. Whether it's a thriving business, an individual achieving their financial dreams, or a seamless cryptocurrency exchange leaving a lasting impact, each testimonial underscores the genuine worth of our offerings. Celebrate success with ABU GLOBAL – where every story inspires our commitment to excellence.</p>
             </div>
           </div>
         </div>

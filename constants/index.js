@@ -72,34 +72,16 @@ export const iconCards = [
 
 export const paymentImages = [
     {
-      src: "assets/zelle.svg",
-      alt: "zelle",
-      width: 200,
-      height: Math.ceil((200 / 2500) * 579),
-    },
-    {
-        src: "assets/wellsFargo.svg",
-        alt: "wells fargo",
-        width: 200,
-        height: Math.ceil((200 / 1200) * 800),
-    },
-    {
-        src: "assets/bankOfAmerica.svg",
-        alt: "bank of america",
-        width: 200,
-        height: Math.ceil((200 / 1200) * 800),
-    },
-    {
-        src: "assets/paypal.svg",
-        alt: "paypal",
-        width: 200,
-        height: Math.ceil((200 / 2500) * 665),
-    },
-    {
         src: "assets/bancolombia.svg",
         alt: "bancolombia",
         width: 200,
         height: Math.ceil((200 / 2500) * 551),
+    },
+    {
+        src: "assets/davivienda.svg",
+        alt: "davivienda",
+        width: 200,
+        height: Math.ceil((200 / 2500) * 572),
     },
     {
         src: "assets/nequi.svg",
@@ -108,10 +90,28 @@ export const paymentImages = [
         height: Math.ceil((200 / 2500) * 572),
     },
     {
-        src: "assets/davivienda.svg",
-        alt: "davivienda",
+        src: "assets/paypal.svg",
+        alt: "paypal",
         width: 200,
-        height: Math.ceil((200 / 2500) * 572),
+        height: Math.ceil((200 / 2500) * 665),
+    },
+    {
+        src: "assets/zelle.svg",
+        alt: "zelle",
+        width: 200,
+        height: Math.ceil((200 / 2500) * 579),
+      },
+    {
+        src: "assets/bankOfAmerica.svg",
+        alt: "bank of america",
+        width: 200,
+        height: Math.ceil((200 / 1200) * 800),
+    },
+    {
+        src: "assets/wellsFargo.svg",
+        alt: "wells fargo",
+        width: 200,
+        height: Math.ceil((200 / 1200) * 800),
     },
 ]
 
