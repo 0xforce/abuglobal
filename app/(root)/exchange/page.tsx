@@ -74,7 +74,7 @@ function page() {
           <FormHeader />
           <Rhf />
         </div>
-        <h1 className='text-white font-bold text-[40px] mt-10'>Buy & Sell Crypto</h1>
+        <h1 className='text-white font-bold text-[36px] md:text-[48px] mt-10'>Buy & Sell Crypto</h1>
       </div>
     </section>
   )

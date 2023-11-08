@@ -90,6 +90,7 @@ function Navbar() {
                   width={24}
                   height={24}
                   onClick={menuHandler}
+                  className={`${pathname.startsWith('/exchange') && "invert"}`}
                 />
               </div>
             </div>
@@ -133,7 +134,7 @@ function Navbar() {
                   />
                 </div>
               ) : pathname.startsWith('/exchange') ? (
-                <button className='button' onClick={connectHandler}>Connect</button>
+                <button className='flex flex-row gap-2 justify-center items-center bg-primary text-white px-5 py-3 rounded-xl shadow-md drop-shadow-md transition-opacity duration-200 ease hover:brightness-90' onClick={connectHandler}>Connect wallet</button>
               ) : (
                 <Link href={'/exchange'} className="w-full">
                   <Button text='Buy & sell crypto' styles='bg-primary text-white px-5 py-3'/>

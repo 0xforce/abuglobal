@@ -115,7 +115,7 @@ export default function Home() {
       <section className="relative z-30 bg-black rounded-b-[32px] mt-[-30px] w-full">
         <div className="h-full mx-auto max-w-7xl flex flex-col justify-center items-center pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
           <p ref={ref1} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>making crypto onboarding simple</p>
-          <h2 ref={ref2} className={`text-white font-semibold text-[40px] lg:text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>One verified crypto exchanger, two powerful ramps</h2>
+          <h2 ref={ref2} className={`text-white font-semibold text-[36px] lg:text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>One verified crypto exchanger, two powerful ramps</h2>
           <div ref={ref3} className={`flex flex-col lg:flex-row gap-6 justify-center mt-[56px] ${isVisible3 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
             <HomeCards 
               img="/assets/onRamp.png" 
@@ -208,12 +208,12 @@ export default function Home() {
 
       {/* //Sixth SECTION ------------------------------------------------------------------ */}
 
-      <section className="relative z-0 bg-white rounded-b-[32px]  w-full">
+      <section className="relative z-0 bg-white rounded-b-[32px] w-full overflow-x-hidden">
         <div ref={ref9} className={`mx-auto max-w-7xl flex flex-col justify-center items-center pt-[40px] pb-[50px] lg:pt-[20px] gap-10 px-[10px] md:px-[24px] ${isVisible9 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
           <p ref={ref10} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible10 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>trusted services</p>
-          <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Evidence of our Trusted Services</h2>
+          <h2 ref={ref11} className={`text-black font-semibold text-[36px] md:text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Evidence of our Trusted Services</h2>
           
-          <div className="flex flex-col md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
+          <div className="flex flex-col max-w-5xl md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
             <div className="flex flex-col justify-center items-center text-center md:text-start">
               <h3 ref={ref12} className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible12 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Verified Transactions</h3>
               <p ref={ref13} className={`text-neutral uppercase text-justify mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible13 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>When you opt for ABU GLOBAL as your crypto on and off-ramp exchanger, you're embracing a reliable partner dedicated to your success. Our Verified Transactions go beyond mere numbers; they symbolize our mission — to provide services that inspire confidence, drive growth, make Web3 accessible, and, most importantly, leave a lasting positive impact on every client we assist.</p>
@@ -223,7 +223,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
+          <div className="flex flex-col max-w-5xl md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
             <div ref={ref15} className={`grow ${isVisible15 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
               <ImageSlider images={wordsOfAppreciation}/>
             </div>
@@ -240,7 +240,7 @@ export default function Home() {
       <section className="relative z-0 bg-white rounded-b-[32px] w-full">
         <div className={`mx-auto max-w-4xl flex flex-col justify-center items-center pb-[50px] gap-10 px-[24px]`}>
           <p ref={ref10} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible10 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>learn more</p>
-          <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Frequently asked questions</h2>
+          <h2 ref={ref11} className={`text-black font-semibold text-[36px] md:text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Frequently asked questions</h2>
           <div className="flex flex-col w-full">
             {preguntas.map((pregunta, index) => (
               <Faq 
