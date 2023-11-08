@@ -209,7 +209,7 @@ export default function Home() {
       {/* //Sixth SECTION ------------------------------------------------------------------ */}
 
       <section className="relative z-0 bg-white rounded-b-[32px]  w-full">
-        <div ref={ref9} className={`mx-auto max-w-7xl flex flex-col justify-center items-center pt-[40px] pb-[50px] lg:pt-[20px] gap-10 px-[10px] lg:px-[24px] ${isVisible9 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+        <div ref={ref9} className={`mx-auto max-w-7xl flex flex-col justify-center items-center pt-[40px] pb-[50px] lg:pt-[20px] gap-10 px-[10px] md:px-[24px] ${isVisible9 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
           <p ref={ref10} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible10 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>trusted services</p>
           <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Evidence of our Trusted Services</h2>
           
