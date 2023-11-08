@@ -66,9 +66,12 @@ export default function Home() {
   const ref15: MutableRefObject<HTMLParagraphElement | null> = useRef(null)
   const isVisible15 = useIsVisible(ref15)
 
-  const images = [
-    '/assets/pex1.jpeg',
-    '/assets/pex2.jpeg',
+  const verifiedTransactions = [
+    '/assets/payments1.jpeg','/assets/payments2.jpeg','/assets/payments3.jpeg','/assets/payments4.jpeg','/assets/payments5.jpeg',
+  ];
+
+  const wordsOfAppreciation = [
+    '/assets/woap.jpeg','/assets/woap1.jpeg','/assets/woap2.jpeg','/assets/woap3.jpeg','/assets/woap4.jpeg','/assets/woap5.jpeg','/assets/woap6.jpeg','/assets/woap7.jpeg','/assets/woap8.jpeg','/assets/woap9.jpeg','/assets/woap10.jpeg','/assets/woap11.jpeg','/assets/woap12.jpeg','/assets/woap13.jpeg','/assets/woap14.jpeg','/assets/woap15.jpeg',
   ];
 
   return (
@@ -158,13 +161,23 @@ export default function Home() {
                 ))}
               </ul>
             </div>
+            <div className="w-[100%] animate-bannermove">
+              <ul className="flex justify-center items-center list-none pl-0 m-0">
+                {paymentImages.map((img, index) => (
+                    <InfiniteCarousel
+                      key={index}
+                      img={img}
+                    />
+                ))}
+              </ul>
+            </div>
           </article>
         </div>
       </section>
 
       {/* //FOURTH SECTION ------------------------------------------------------------------ */}
 
-      <section className="relative z-10 rounded-b-[32px] mt-20 w-full bg-cover bg-[url('/assets/gradient.png')]">
+      <section id="about" className="relative z-10 rounded-b-[32px] mt-20 w-full bg-cover bg-[url('/assets/gradient.png')]">
         <div className="mx-auto max-w-7xl flex flex-col justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
           <p ref={ref6} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible6 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>buying & selling cryptocurrency</p>
           <h2 ref={ref7} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible7 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>How to exchange your crypto online with AbuGlobal</h2>
@@ -206,13 +219,13 @@ export default function Home() {
               <p ref={ref13} className={`text-neutral uppercase text-justify mt-[20px] font-bold text-[16px] leading-[24px] ${isVisible13 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>When you opt for ABU GLOBAL as your crypto on and off-ramp exchanger, you're embracing a reliable partner dedicated to your success. Our Verified Transactions go beyond mere numbers; they symbolize our mission — to provide services that inspire confidence, drive growth, make Web3 accessible, and, most importantly, leave a lasting positive impact on every client we assist.</p>
             </div>
             <div ref={ref14} className={`${isVisible14 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
-              <ImageSlider images={images}/>
+              <ImageSlider images={verifiedTransactions}/>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row gap-10 bg-[#f0f2f4] rounded-2xl p-6">
             <div ref={ref15} className={`grow ${isVisible15 && "animate-fade-right animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
-              <ImageSlider images={images}/>
+              <ImageSlider images={wordsOfAppreciation}/>
             </div>
             <div className="flex flex-col justify-center items-center text-center md:text-start">
               <h3 className={`text-black uppercase font-semibold text-[20px] leading-[40px] ${isVisible15 && "animate-fade-left animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>words of appreciation</h3>

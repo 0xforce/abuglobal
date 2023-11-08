@@ -12,8 +12,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import ReactPhoneInput from "react-phone-input-2";
 import 'react-phone-input-2/lib/style.css'
 
-import { useRouter } from 'next/navigation';
-
 import { makeTelegramAPICall } from '@/app/_actions'
 
 type Inputs = {
@@ -29,7 +27,6 @@ type Inputs = {
 }
 
 export default function Rhf() {
-    const router = useRouter();
     const isBuy = useAppSelector(state => state.generalSlice.isBuy)
 
     const paymentMethods = [{name: 'Zelle', value: 'Zelle'}, {name: 'Bancolombia', value: 'Bancolombia'}, {name: 'Nequi', value: 'Nequi'}, {name: 'ACH Transfer', value: 'ACH_Transfer'}, {name: 'Bank of America', value: 'Bank_of_America'}, {name: 'Wells Fargo', value: 'Wells_Fargo'}]
@@ -85,11 +82,14 @@ export default function Rhf() {
                 const newTab = window.open(whatsappUrl, '_blank');
                 newTab?.focus();
 
+                reset(defaultValues);
+
                 toast.success("Order Successful")
             } else if (data.contact === 'Telegram') {
                 const response = await makeTelegramAPICall(data)
 
                 if (response === true) {
+                    reset(defaultValues);
                     toast.success("Order Successful, we will contact you through telegram asap")
                 } else if (response === false) {
                     toast.error("Something went wrong, please try again")
@@ -97,7 +97,6 @@ export default function Rhf() {
             }
 
         } catch (error) {
-            // // unknown error
             toast.error("An unexpected error occurred while submitting, please try again")
         }
     }
@@ -283,7 +282,7 @@ export default function Rhf() {
             )}
             
             <button type="submit" disabled={isSubmitting} className="bg-primary w-full py-3 px-5 rounded-md font-bold text-white mt-3">
-                {isSubmitting ? <Loading/> : "Make Order"}
+                {isSubmitting ? <Loading text='Making Order'/> : "Make Order"}
             </button>
             <ToastContainer position="bottom-center"/>
 

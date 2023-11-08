@@ -21,6 +21,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: 'Space Grotesk', sans-serif;
 	color: black;
   background: var(--clr-white);

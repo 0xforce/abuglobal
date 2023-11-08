@@ -58,7 +58,6 @@ function Navbar() {
 
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex gap-4 font-semibold leading-5 items-center">
-              <Link href={'/about'} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">About</Link>
               <Link href={'/contact'} className="border-b-2 border-transparent transition-border-color duration-300 ease hover:border-primary">Contact</Link>
               {pathname.startsWith('/exchange') && address ? (
                 <div className='flex flex-row gap-2 justify-center items-center bg-primary text-white px-5 py-2 rounded-xl shadow-md'>
@@ -117,7 +116,6 @@ function Navbar() {
 
           <div className="flex flex-col gap-4 px-8">
             <div className="flex flex-col gap-8 font-semibold leading-5 justify-start">
-              <Link href={''} className="text-[30px] transition-opacity duration-400 ease-in hover:opacity-20">About</Link>
               <Link href={''} className="text-[30px] transition-opacity duration-400 ease-in hover:opacity-20">Contact</Link>
               {pathname.startsWith('/exchange') && address ? (
                 <div className='flex flex-row gap-2 justify-center items-center bg-primary text-white px-5 py-2 rounded-xl shadow-md'>

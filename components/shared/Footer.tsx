@@ -30,7 +30,6 @@ function Footer() {
                 <div className="flex-grow">
                     <h4 className="uppercase text-neutral text-[12px] font-bold font-primary">Company</h4>
                     <div className="flex flex-col gap-2 mt-6">
-                        <Link href='/about' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">About us</Link>
                         <Link href='/contact' className="font-primary font-semibold cursor-pointer text-[16px] hover:text-neutral transition-all duration-200">Contact us</Link>
                     </div>
                 </div>
