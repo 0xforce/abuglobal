@@ -81,7 +81,7 @@ export default function Home() {
       <section className="relative z-40 rounded-b-[32px] bg-white">
         <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between px-10 mt-20">
           <div className="w-full flex flex-col gap-6 items-center lg:items-start">
-            <p className="font-primary text-black font-bold text-[55px] leading-[77px] animate-fade-up animate-once animate-duration-300 animate-ease-in">Enable users to<br /><span className="text-primary">buy & sell crypto</span><br /> for fiat currency</p>
+            <p className="font-primary text-black font-bold text-[40px] leading-[45px] md:text-[55px] md:leading-[77px] animate-fade-up animate-once animate-duration-300 animate-ease-in">Enable users to<br /><span className="text-primary">buy & sell crypto</span><br /> for fiat currency</p>
             <p className="text-neutral text-[18px] leading-7 text-center lg:text-start animate-fade-up animate-once animate-duration-300 animate-delay-100 animate-ease-in">Simplify your crypto transactions with us. Experience seamless and secure buying and selling, backed by a seasoned exchanger that prioritizes the integrity of your assets. Enjoy personalized support via direct chat, phone, email, or text. No complications, no delays – just effortless crypto on and off-ramping.</p>
             <div className="flex flex-col md:flex-row gap-4 w-full justify-center lg:justify-start animate-fade-up animate-once animate-duration-300 animate-delay-200 animate-ease-in">
               <Link href={'/'}>
@@ -115,7 +115,7 @@ export default function Home() {
       <section className="relative z-30 bg-black rounded-b-[32px] mt-[-30px] w-full">
         <div className="h-full mx-auto max-w-7xl flex flex-col justify-center items-center pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
           <p ref={ref1} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible1 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>making crypto onboarding simple</p>
-          <h2 ref={ref2} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>One verified crypto exchanger, two powerful ramps</h2>
+          <h2 ref={ref2} className={`text-white font-semibold text-[40px] lg:text-[48px] text-center leading-[58px] px-4 ${isVisible2 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>One verified crypto exchanger, two powerful ramps</h2>
           <div ref={ref3} className={`flex flex-col lg:flex-row gap-6 justify-center mt-[56px] ${isVisible3 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
             <HomeCards 
               img="/assets/onRamp.png" 
@@ -140,7 +140,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl flex flex-col justify-center items-center mt-10 pb-[10px] lg:pt-[20px] gap-6 px-[24px] overflow-hidden">
           <h2 ref={ref5} className={`font-bold text-primary text-[24px] leading-[24px] uppercase ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-600 animate-ease-in"}`}>Payment Methods</h2>
           <p className={`text-neutral font-semibold text-center ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Choose your preferred option from all major global available payment methods. Buy crypto Bank transfers, Zelle, Paypal, Nequi, and many others</p>
-          <article className="flex w-[300%] lg:w-[180%] mt-10">
+          <article className="flex w-[320%] lg:w-[180%] mt-10">
             <div className="w-[100%] animate-bannermove">
               <ul className="flex justify-center items-center list-none pl-0 m-0">
                 {paymentImages.map((img, index) => (
@@ -180,7 +180,7 @@ export default function Home() {
       <section id="about" className="relative z-10 rounded-b-[32px] mt-20 w-full bg-cover bg-[url('/assets/gradient.png')]">
         <div className="mx-auto max-w-7xl flex flex-col justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-6 px-[24px]">
           <p ref={ref6} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible6 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>buying & selling cryptocurrency</p>
-          <h2 ref={ref7} className={`text-white font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible7 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>How to exchange your crypto online with AbuGlobal</h2>
+          <h2 ref={ref7} className={`text-white font-semibold text-[36px] md:text-[48px] text-center leading-[58px] px-4 ${isVisible7 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>How to exchange your crypto online with AbuGlobal</h2>
           <div ref={ref8} className={`flex flex-wrap gap-6 mt-8 ${isVisible8 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
             {exchangeProcess.map((num, index) => (
               <ProcessStep
@@ -209,7 +209,7 @@ export default function Home() {
       {/* //Sixth SECTION ------------------------------------------------------------------ */}
 
       <section className="relative z-0 bg-white rounded-b-[32px]  w-full">
-        <div ref={ref9} className={`mx-auto max-w-7xl flex flex-col justify-center items-center pt-[60px] pb-[50px] lg:pt-[20px] gap-10 px-[24px] ${isVisible9 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
+        <div ref={ref9} className={`mx-auto max-w-7xl flex flex-col justify-center items-center pt-[40px] pb-[50px] lg:pt-[20px] gap-10 px-[10px] lg:px-[24px] ${isVisible9 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>
           <p ref={ref10} className={`text-primary uppercase mt-[80px] font-bold text-[16px] leading-[24px] ${isVisible10 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>trusted services</p>
           <h2 ref={ref11} className={`text-black font-semibold text-[48px] text-center leading-[58px] px-4 ${isVisible11 && "animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Evidence of our Trusted Services</h2>
           

@@ -39,17 +39,17 @@ function page({ params }: {
                     <section>
                         {params.legal === 'terms-of-service' && (
                             <div className='mx-auto max-w-7xl flex justify-center'>
-                                <p className='mx-[120px] my-20'>{parse(legal.termsOfService)}</p>
+                                <p className='mx-[40px] lg:mx-[120px] my-20'>{parse(legal.termsOfService)}</p>
                             </div>
                         )}
                         {params.legal === 'privacy-policy' && (
                             <div className='mx-auto max-w-7xl flex justify-center'>
-                                <p className='mx-[120px] my-20'>{parse(legal.privacyPolicy)}</p>
+                                <p className='mx-[40px] lg:mx-[120px] my-20'>{parse(legal.privacyPolicy)}</p>
                             </div>
                         )}
                         {params.legal === 'aml-kyc-policy' && (
                             <div className='mx-auto max-w-7xl flex justify-center'>
-                                <div className='mx-[120px] my-20'>{parse(legal.amlKycPolicy)}</div>
+                                <div className='mx-[40px] lg:mx-[120px] my-20'>{parse(legal.amlKycPolicy)}</div>
                             </div>
                         )}
                     </section>
