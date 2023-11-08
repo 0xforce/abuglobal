@@ -72,12 +72,6 @@ export const iconCards = [
 
 export const paymentImages = [
     {
-        src: "assets/bancolombia.svg",
-        alt: "bancolombia",
-        width: 200,
-        height: Math.ceil((200 / 2500) * 551),
-    },
-    {
         src: "assets/davivienda.svg",
         alt: "davivienda",
         width: 200,
@@ -88,6 +82,12 @@ export const paymentImages = [
         alt: "nequi",
         width: 200,
         height: Math.ceil((200 / 2500) * 572),
+    },
+    {
+        src: "assets/bancolombia.svg",
+        alt: "bancolombia",
+        width: 200,
+        height: Math.ceil((200 / 2500) * 551),
     },
     {
         src: "assets/paypal.svg",

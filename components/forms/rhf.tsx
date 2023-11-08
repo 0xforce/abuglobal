@@ -29,7 +29,7 @@ type Inputs = {
 export default function Rhf() {
     const isBuy = useAppSelector(state => state.generalSlice.isBuy)
 
-    const paymentMethods = [{name: 'Zelle', value: 'Zelle'}, {name: 'Bancolombia', value: 'Bancolombia'}, {name: 'Nequi', value: 'Nequi'}, {name: 'ACH Transfer', value: 'ACH_Transfer'}, {name: 'Bank of America', value: 'Bank_of_America'}, {name: 'Wells Fargo', value: 'Wells_Fargo'}]
+    const paymentMethods = [{name: 'Zelle', value: 'Zelle'}, {name: 'ACH Transfer', value: 'ACH_Transfer'}, {name: 'Bank of America', value: 'Bank_of_America'}, {name: 'Wells Fargo', value: 'Wells_Fargo'}, {name: 'Bancolombia', value: 'Bancolombia'}, {name: 'Nequi', value: 'Nequi'}, {name: 'Davivienda', value: 'Davivienda'}]
 
     const contact = ['Whatsapp', 'Telegram']
 
@@ -74,7 +74,7 @@ export default function Rhf() {
             const marketDownEmoji = '%F0%9F%93%89';
             const pointUpEmoji = '%F0%9F%91%86';
 
-            const whatsappMessage = `${data.orderType === 'buy' ? marketUpEmoji : marketDownEmoji}%20%2A${data.orderType.toUpperCase()}%2A%0A%0AI%20want%20to%20%2A${data.orderType}%2A%20%2A${data.orderType === 'buy' ? ('%24%20' + data.amount + '%2A%20worth%20of') : (data.amount)}%20%2A${data.token === 'other' ? data.otherToken : data.token.toUpperCase()}%2A.%0A%0AName%3A%20%2A${data.name}%2A%0APhone%20number%3A%20%2B%2A${data.phone}%2A%0APayment%20method%3A%20%2A${data.payment}%2A%0ATelegram%3A%20%2A${data.telegram}%2A%0A%0A${pointUpEmoji}%20Send%20this%20message,%20we%20will%20respond%20ASAP.`
+            const whatsappMessage = `${data.orderType === 'buy' ? marketUpEmoji : marketDownEmoji}%20%2A${data.orderType.toUpperCase()}%2A%0A%0AI%20want%20to%20%2A${data.orderType}%2A%20%2A${data.orderType === 'buy' ? ('%24%20' + data.amount + '%2A%20worth%20of') : (data.amount)}%20%2A${data.token === 'other' ? data.otherToken : data.token.toUpperCase()}%2A.%0A%0AName%3A%20%2A${data.name}%2A%0APhone%20number%3A%20%2B%2A${data.phone}%2A%0APayment%20method%3A%20%2A${data.payment}%2A%0A%0A${pointUpEmoji}%20Send%20this%20message,%20we%20will%20respond%20ASAP.`
 
             const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`
 
