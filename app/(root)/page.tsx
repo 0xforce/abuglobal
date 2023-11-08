@@ -140,8 +140,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl flex flex-col justify-center items-center mt-10 pb-[10px] lg:pt-[20px] gap-6 px-[24px] overflow-hidden">
           <h2 ref={ref5} className={`font-bold text-primary text-[24px] leading-[24px] uppercase ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-600 animate-ease-in"}`}>Payment Methods</h2>
           <p className={`text-neutral font-semibold text-center ${isVisible5 && " animate-fade-up animate-once animate-duration-700 animate-delay-500 animate-ease-in"}`}>Choose your preferred option from all major global available payment methods. Buy crypto Bank transfers, Zelle, Paypal, Nequi, and many others</p>
-          <article className="flex w-[400%] lg:w-[180%] mt-10">
-            <div className="w-[100%] animate-bannermove">
+          <article className="flex flex-row overflow-x-visible w-[500%] animate-bannermove lg:w-[200%] mt-10">
+            <div className="w-[100%]">
               <ul className="flex justify-center items-center list-none pl-0 m-0">
                 {paymentImages.map((img, index) => (
                     <InfiniteCarousel
@@ -151,7 +151,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="w-[100%] animate-bannermove">
+            <div className="w-[100%]">
               <ul className="flex justify-center items-center list-none pl-0 m-0">
                 {paymentImages.map((img, index) => (
                     <InfiniteCarousel
@@ -161,7 +161,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="w-[100%] animate-bannermove">
+            <div className="w-[100%]">
               <ul className="flex justify-center items-center list-none pl-0 m-0">
                 {paymentImages.map((img, index) => (
                     <InfiniteCarousel
