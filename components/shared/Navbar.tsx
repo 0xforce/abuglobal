@@ -117,7 +117,7 @@ function Navbar() {
 
           <div className="flex flex-col gap-4 px-8">
             <div className="flex flex-col gap-8 font-semibold leading-5 justify-start">
-              <Link href={''} className="text-[30px] transition-opacity duration-400 ease-in hover:opacity-20">Contact</Link>
+              <Link href={'/contact'} className="text-[30px] transition-opacity duration-400 ease-in hover:opacity-20">Contact</Link>
               {pathname.startsWith('/exchange') && address ? (
                 <div className='flex flex-row gap-2 justify-center items-center bg-primary text-white px-5 py-2 rounded-xl shadow-md'>
                   <Link href={(config as any)[chainId] ? `${(config as any)[chainId].explorerURL}/address/${address}` : '#'}>
