@@ -187,7 +187,7 @@ export default function Home() {
             />
 
             <HomeCards
-              img="/assets/OffRamp.png"
+              img="/assets/offRamp.png"
               alt="off-ramp crypto"
               title="Crypto to fiat off-ramp"
               text="Give users the freedom to move back to fiat by selling their cryptocurrencies and receiving traditional currencies in return through bank transfers and other payment methods available"
