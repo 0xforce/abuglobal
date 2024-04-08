@@ -6,11 +6,13 @@ type Inputs = {
   otherToken: string;
   blockchain: string;
   amount: number;
+  wallet: string;
   name: string;
   payment: string;
   phone: string;
   contact: string;
   telegram: string;
+  referral: string;
 };
 
 export async function makeTelegramAPICall(data: Inputs) {
@@ -22,15 +24,25 @@ export async function makeTelegramAPICall(data: Inputs) {
 
   const telegramMessage = `${
     data.orderType === "buy" ? marketUpEmoji : marketDownEmoji
-  } ${data.orderType.toUpperCase()}\n\nI want to ${data.orderType} ${
+  } ${data.orderType.toUpperCase()}
+  
+  I want to ${data.orderType} ${
     data.orderType === "buy" ? "$" + data.amount : data.amount
-  } worth of ${
-    data.token === "other" ? data.otherToken : data.token
-  }.\n\nName: ${data.name}\nPhone number: +${data.phone}\nPayment method: ${
-    data.payment
-  }\nTelegram: ${
-    "https://" + data.telegram + ".t.me"
-  }\n\n👆 Send this message, we will respond ASAP.`;
+  } ${data.token === "other" ? data.otherToken : data.token.toUpperCase()}.
+  
+  Name: ${data.name}
+  Phone number: +${data.phone}
+  Payment method: ${data.payment}
+  ${
+    data.orderType === "buy"
+      ? `Receiving address: ${data.wallet}\nChain: ${data.blockchain}\n`
+      : ""
+  }
+  Referral: ${data.referral}
+  Telegram: ${"https://" + data.telegram + ".t.me"}
+  
+  
+  👆 Send this message, we will respond ASAP.`;
 
   const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=-${telegramChatId}&text=${encodeURIComponent(
     telegramMessage
