@@ -197,7 +197,7 @@ export default function Rhf() {
               htmlFor="amount"
               className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500"
             >
-              Amount in USD (min. $150)
+              Amount in USD (min. $250)
             </label>
             <div className="rounded-md border-solid border-[#E8EAED] border-[1px]">
               <input
@@ -208,7 +208,7 @@ export default function Rhf() {
                 {...register("amount", {
                   required: "Amount is required",
                   min: {
-                    value: 150,
+                    value: 250,
                     message: "Amount must be greater than or equal to $150",
                   },
                 })}
